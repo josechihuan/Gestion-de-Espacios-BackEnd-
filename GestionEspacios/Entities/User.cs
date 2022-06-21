@@ -12,10 +12,10 @@ namespace Entities
         public string Name { get; set; }
         public string Apellidos { get; set; }
         public string Email { get; set; }
-        public string Avatar { get; set; }
+       // public string Avatar { get; set; }
         public Role? RoleId { get; set; }
         public Department? DepartmentId { get; set; }
-
+        public List<ResetPasswordAttemp> ResetPasswordAttemps { get; set; }
 
 
     }

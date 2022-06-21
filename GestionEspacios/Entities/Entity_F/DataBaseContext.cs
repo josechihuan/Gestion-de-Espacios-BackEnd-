@@ -35,6 +35,10 @@ namespace Entities.Entity_F
                 .HasOne(x => x.DepartmentId);
 
             base.OnModelCreating(modelBuilder);
+            modelBuilder.Entity<User>()
+                .HasMany(x => x.ResetPasswordAttemps);
+
+            base.OnModelCreating(modelBuilder);
             modelBuilder.Entity<Department>()
                 .HasOne(x => x.CompanyId);
 
@@ -73,6 +77,14 @@ namespace Entities.Entity_F
             base.OnModelCreating(modelBuilder);
             modelBuilder.Entity<Meeting>()
                 .HasMany(x => x.Reservations);
+
+            base.OnModelCreating(modelBuilder);
+            modelBuilder.Entity<Role>()
+                .HasMany(x => x.Users);
+
+            base.OnModelCreating(modelBuilder);
+            modelBuilder.Entity<ResetPasswordAttemp>()
+                .HasOne(x => x.UserId);
 
         }
 
