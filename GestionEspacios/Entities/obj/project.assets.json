@@ -2019,19 +2019,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\josec\\.nuget\\packages\\": {}
+    "C:\\Users\\domin\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\josec\\OneDrive\\Escritorio\\GESTION_ESPACIOS\\Backend\\GestionEspacios\\Entities\\Entities.csproj",
+      "projectUniqueName": "C:\\Users\\domin\\Source\\Repos\\Gestion-de-Espacios-BackEnd-\\GestionEspacios\\Entities\\Entities.csproj",
       "projectName": "Entities",
-      "projectPath": "C:\\Users\\josec\\OneDrive\\Escritorio\\GESTION_ESPACIOS\\Backend\\GestionEspacios\\Entities\\Entities.csproj",
-      "packagesPath": "C:\\Users\\josec\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\josec\\OneDrive\\Escritorio\\GESTION_ESPACIOS\\Backend\\GestionEspacios\\Entities\\obj\\",
+      "projectPath": "C:\\Users\\domin\\Source\\Repos\\Gestion-de-Espacios-BackEnd-\\GestionEspacios\\Entities\\Entities.csproj",
+      "packagesPath": "C:\\Users\\domin\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\domin\\Source\\Repos\\Gestion-de-Espacios-BackEnd-\\GestionEspacios\\Entities\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\josec\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\domin\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2097,7 +2097,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -13,9 +13,9 @@ namespace Entities
         public int WorkPlaceId { get; set; }
         public int MeetingId { get; set; }
 
-        public User User { get; set; }
-        public WorkPlace WorkPlace { get; set; }
-        public Meeting Meeting { get; set; }
+        public User? User { get; set; }
+        public WorkPlace? WorkPlace { get; set; }
+        public Meeting? Meeting { get; set; }
 
     }
 }

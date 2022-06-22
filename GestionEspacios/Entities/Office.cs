@@ -9,7 +9,7 @@ namespace Entities
     public class Office
     {
         public int Id { get; set; }
-        public List<WorkPlace> WorkPlaces { get; set; }
+        public List<WorkPlace>? WorkPlaces { get; set; }
         public DateTime BookingDate { get; set; }
 
 

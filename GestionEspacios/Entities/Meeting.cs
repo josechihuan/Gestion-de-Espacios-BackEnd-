@@ -10,7 +10,7 @@ namespace Entities
     {
         public int Id { get; set; }
         public DateTime ReservationTime { get; set; }
-        public List<Reservation> Reservations { get; set; }
+        public List<Reservation>? Reservations { get; set; }
 
     }
 }
