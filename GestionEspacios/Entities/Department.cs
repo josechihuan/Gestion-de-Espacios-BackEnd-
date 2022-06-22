@@ -14,6 +14,6 @@ namespace Entities
 
         public Company? Company { get; set; }
 
-        public List<User> Users { get; set; }   
+        public List<User>? Users { get; set; }   
     }
 }

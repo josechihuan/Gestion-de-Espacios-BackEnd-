@@ -10,7 +10,7 @@ namespace Entities
     {
         public int Id { get; set; }
         public int OfficeId { get; set; }
-        public List<Reservation> Reservations { get; set; }
-        public Office Office { get; set; }
+        public List<Reservation>? Reservations { get; set; }
+        public Office? Office { get; set; }
     }
 }

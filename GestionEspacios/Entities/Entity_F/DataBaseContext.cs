@@ -14,11 +14,11 @@ namespace Entities.Entity_F
         public DataBaseContext(DbContextOptions<DataBaseContext> options) : base(options) 
          { }
 
-       /* protected override void OnConfiguring(DbContextOptionsBuilder dbContextOptionsBuilder)
-        {
-            dbContextOptionsBuilder.UseSqlServer("Data Source= LAPTOP-SL4OFHD4\\SQLEXPRESS;Initial Catalog=GestionDeEspacios;Integrated Security=True");
+        //protected override void OnConfiguring(DbContextOptionsBuilder dbContextOptionsBuilder)
+        //{
+        //    dbContextOptionsBuilder.UseSqlServer("Data Source=DOMIRUS\\SQLEXPRESS;Initial Catalog=GestionDeEspacios;Integrated Security=True");
 
-        }*/
+        //}
         public DbSet<User> Users { get; set; }
         public DbSet<Role> Roles { get; set; }
         public DbSet<Company> Companies { get; set; }
@@ -34,14 +34,13 @@ namespace Entities.Entity_F
             modelBuilder.Entity<User>()
                 .HasOne(x => x.Role);
            
-            // PREGUNTAR A CESAR PARA OPTIMIZAR ESTE COGIDO
             base.OnModelCreating(modelBuilder);
             modelBuilder.Entity<User>()
                 .HasOne(x => x.Department);
 
             base.OnModelCreating(modelBuilder);
-            modelBuilder.Entity<User>()
-                .HasMany(x => x.ResetPasswordAttemps);
+            modelBuilder.Entity<ResetPasswordAttemp>()
+                .HasOne(x => x.User);            
 
             base.OnModelCreating(modelBuilder);
             modelBuilder.Entity<Department>()
@@ -62,6 +61,10 @@ namespace Entities.Entity_F
             base.OnModelCreating(modelBuilder);
             modelBuilder.Entity<Reservation>()
                 .HasOne(x => x.Meeting);
+
+            base.OnModelCreating(modelBuilder);
+            modelBuilder.Entity<User>()
+                .HasMany(x => x.ResetPasswordAttemps);
 
             base.OnModelCreating(modelBuilder);
             modelBuilder.Entity<Office>()
@@ -87,10 +90,7 @@ namespace Entities.Entity_F
             modelBuilder.Entity<Role>()
                 .HasMany(x => x.Users);
 
-            base.OnModelCreating(modelBuilder);
-            modelBuilder.Entity<ResetPasswordAttemp>()
-                .HasOne(x => x.User);
-
+            
         }
 
     }
