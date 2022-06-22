@@ -11,6 +11,7 @@
           "DataAccess": "1.0.0",
           "Entities": "1.0.0",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "6.0.6",
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "6.0.6",
           "Swashbuckle.AspNetCore": "6.2.3"
         },
         "runtime": {
