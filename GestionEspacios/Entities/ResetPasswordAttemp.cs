@@ -10,7 +10,8 @@ namespace Entities
     {
         public Guid Id { get; set; }
         public DateTime ExpirationDate { get; set; }
-        public User? UserId { get; set; }
+        public int UserId { get; set; }
+        public User User { get; set; }
                
     }
 }

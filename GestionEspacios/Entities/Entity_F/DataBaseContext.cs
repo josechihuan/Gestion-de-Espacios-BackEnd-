@@ -12,8 +12,13 @@ namespace Entities.Entity_F
     public class DataBaseContext : IdentityDbContext<IdentityUser>   
     {
         public DataBaseContext(DbContextOptions<DataBaseContext> options) : base(options) 
-        { }
+         { }
 
+       /* protected override void OnConfiguring(DbContextOptionsBuilder dbContextOptionsBuilder)
+        {
+            dbContextOptionsBuilder.UseSqlServer("Data Source= LAPTOP-SL4OFHD4\\SQLEXPRESS;Initial Catalog=GestionDeEspacios;Integrated Security=True");
+
+        }*/
         public DbSet<User> Users { get; set; }
         public DbSet<Role> Roles { get; set; }
         public DbSet<Company> Companies { get; set; }
@@ -27,12 +32,12 @@ namespace Entities.Entity_F
         {
             base.OnModelCreating(modelBuilder);
             modelBuilder.Entity<User>()
-                .HasOne(x => x.RoleId);
+                .HasOne(x => x.Role);
            
             // PREGUNTAR A CESAR PARA OPTIMIZAR ESTE COGIDO
             base.OnModelCreating(modelBuilder);
             modelBuilder.Entity<User>()
-                .HasOne(x => x.DepartmentId);
+                .HasOne(x => x.Department);
 
             base.OnModelCreating(modelBuilder);
             modelBuilder.Entity<User>()
@@ -40,23 +45,23 @@ namespace Entities.Entity_F
 
             base.OnModelCreating(modelBuilder);
             modelBuilder.Entity<Department>()
-                .HasOne(x => x.CompanyId);
+                .HasOne(x => x.Company);
 
             base.OnModelCreating(modelBuilder);
             modelBuilder.Entity<WorkPlace>()
-                .HasOne(x => x.OfficeId);
+                .HasOne(x => x.Office);
 
             base.OnModelCreating(modelBuilder);
             modelBuilder.Entity<Reservation>()
-                .HasOne(x => x.WorkPlaceId);
+                .HasOne(x => x.WorkPlace);
 
             base.OnModelCreating(modelBuilder);
             modelBuilder.Entity<Reservation>()
-                .HasOne(x => x.UserId);
+                .HasOne(x => x.User);
 
             base.OnModelCreating(modelBuilder);
             modelBuilder.Entity<Reservation>()
-                .HasOne(x => x.MeetingId);
+                .HasOne(x => x.Meeting);
 
             base.OnModelCreating(modelBuilder);
             modelBuilder.Entity<Office>()
@@ -84,7 +89,7 @@ namespace Entities.Entity_F
 
             base.OnModelCreating(modelBuilder);
             modelBuilder.Entity<ResetPasswordAttemp>()
-                .HasOne(x => x.UserId);
+                .HasOne(x => x.User);
 
         }
 

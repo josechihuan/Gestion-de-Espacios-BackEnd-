@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace Entities
 {
-    public class WorkPlace : Office
+    public class WorkPlace 
     {
         public int Id { get; set; }
-        public Office OfficeId { get; set; }
+        public int OfficeId { get; set; }
         public List<Reservation> Reservations { get; set; }
+        public Office Office { get; set; }
     }
 }
