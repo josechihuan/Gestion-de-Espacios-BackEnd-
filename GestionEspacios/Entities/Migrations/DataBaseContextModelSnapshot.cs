@@ -193,7 +193,7 @@ namespace Entities.Migrations
 
                     b.HasIndex("RoleId");
 
-                    b.ToTable("Users");
+                    b.ToTable("User");
                 });
 
             modelBuilder.Entity("Entities.WorkPlace", b =>

@@ -1,8 +1,10 @@
 using DataAccess;
+using Entities.Auth;
 using Entities.Entity_F;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using System.Text;
@@ -47,7 +49,11 @@ builder.Services.AddSwaggerGen(cfg =>
 builder.Services.AddDbContext<DataBaseContext>(options => options.UseSqlServer(configuration.GetConnectionString("ConnStr")));
 
 
+/*builder.Services.AddIdentityCore<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = true)
+              .AddEntityFrameworkStores<DataBaseContext>();*/
 // For Identity
+/*builder.Services.AddDefaultIdentity<ApplicationUser>().AddEntityFrameworkStores<DataBaseContext>();*/
+
 builder.Services.AddIdentity<IdentityUser, IdentityRole>()
     .AddEntityFrameworkStores<DataBaseContext>()
     .AddDefaultTokenProviders();

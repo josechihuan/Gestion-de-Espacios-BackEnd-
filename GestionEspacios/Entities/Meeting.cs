@@ -9,7 +9,8 @@ namespace Entities
     public class Meeting
     {
         public int Id { get; set; }
-        public DateTime ReservationTime { get; set; }
+        public DateTime ReservationStartTime { get; set; }
+        public DateTime ReservationEndTime { get; set; }
         public List<Reservation>? Reservations { get; set; }
 
     }
