@@ -59,7 +59,7 @@ namespace GestionEspacios.Controllers
         }
 
         [HttpPost]
-        [Route("register-braven")]
+        [Route("registerbravent")]
         public async Task<IActionResult> RegisterUser([FromBody] RegisterModel model)
         {
             var userExists = await _userManager.FindByEmailAsync(model.Email);
@@ -77,23 +77,23 @@ namespace GestionEspacios.Controllers
                 return StatusCode(StatusCodes.Status500InternalServerError, new Response { Status = "Error", Message = "User creation failed! Please check user details and try again." });
 
 
-
             if (!await _roleManager.RoleExistsAsync(UserRoles.User))
-                 await _roleManager.CreateAsync(new IdentityRole(UserRoles.User));
+                await _roleManager.CreateAsync(new IdentityRole(UserRoles.User));
 
-      
 
-             if (await _roleManager.RoleExistsAsync(UserRoles.User))
-              {
-                  await _userManager.AddToRoleAsync(user, UserRoles.User);
-              }
+
+
+            if (await _roleManager.RoleExistsAsync(UserRoles.User))
+            {
+                await _userManager.AddToRoleAsync(user, UserRoles.User);
+            }
+
             return Ok(new Response { Status = "Success", Message = "User created successfully!" });
+
         }
 
-      
-
-        [HttpPost]
-       [Route("register-bitwork")]
+            [HttpPost]
+       [Route("registerbitwork")]
         public async Task<IActionResult> RegisterAdmin([FromBody] RegisterModel model)
         {
             var userExists = await _userManager.FindByEmailAsync(model.Email);
