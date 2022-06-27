@@ -9,6 +9,8 @@ using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using System.Text;
 
+var myAlloSpecificOrigins = "_myAlloSpecificOrigins";
+
 
 var builder = WebApplication.CreateBuilder(args);
 ConfigurationManager configuration = builder.Configuration;
@@ -89,6 +91,16 @@ builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepositor
 
 //builder.Services.AddScoped<IBrandRepository, BrandRepository>();de usuarios 
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(name: myAlloSpecificOrigins,
+    builder =>
+    {
+        builder.WithOrigins("http://localhost:4200")
+    .AllowAnyMethod()
+    .AllowAnyHeader();
+    });
+});
 
 var app = builder.Build();
 
@@ -100,6 +112,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseCors(myAlloSpecificOrigins);
 
 app.UseAuthentication();
 
