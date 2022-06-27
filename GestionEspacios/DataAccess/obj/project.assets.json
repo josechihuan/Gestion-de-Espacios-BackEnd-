@@ -1948,9 +1948,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\josec\\source\\repos\\Gestion-de-Espacios-BackEnd-\\GestionEspacios\\DataAccess\\DataAccess.csproj",
+      "projectUniqueName": "C:\\Users\\josec\\Source\\Repos\\Gestion-de-Espacios-BackEnd-\\GestionEspacios\\DataAccess\\DataAccess.csproj",
       "projectName": "DataAccess",
-      "projectPath": "C:\\Users\\josec\\source\\repos\\Gestion-de-Espacios-BackEnd-\\GestionEspacios\\DataAccess\\DataAccess.csproj",
+      "projectPath": "C:\\Users\\josec\\Source\\Repos\\Gestion-de-Espacios-BackEnd-\\GestionEspacios\\DataAccess\\DataAccess.csproj",
       "packagesPath": "C:\\Users\\josec\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\josec\\Source\\Repos\\Gestion-de-Espacios-BackEnd-\\GestionEspacios\\DataAccess\\obj\\",
       "projectStyle": "PackageReference",
@@ -1969,8 +1969,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\josec\\source\\repos\\Gestion-de-Espacios-BackEnd-\\GestionEspacios\\Entities\\Entities.csproj": {
-              "projectPath": "C:\\Users\\josec\\source\\repos\\Gestion-de-Espacios-BackEnd-\\GestionEspacios\\Entities\\Entities.csproj"
+            "C:\\Users\\josec\\Source\\Repos\\Gestion-de-Espacios-BackEnd-\\GestionEspacios\\Entities\\Entities.csproj": {
+              "projectPath": "C:\\Users\\josec\\Source\\Repos\\Gestion-de-Espacios-BackEnd-\\GestionEspacios\\Entities\\Entities.csproj"
             }
           }
         }

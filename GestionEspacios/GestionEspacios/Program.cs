@@ -9,9 +9,10 @@ using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using System.Text;
 
+
 var builder = WebApplication.CreateBuilder(args);
 ConfigurationManager configuration = builder.Configuration;
-// Add services to the container.
+
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -80,9 +81,9 @@ builder.Services.AddAuthentication(options =>
     };
 });
 
-// añadimos los servicios de la interfase
+// aï¿½adimos los servicios de la interfase
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
-//añadimos el generic repository
+//aï¿½adimos el generic repository
 builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
 //cuando se inyecte brandrepositore que utilice brandrepository
 

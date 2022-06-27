@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\josec\\source\\repos\\Gestion-de-Espacios-BackEnd-\\GestionEspacios\\Entities\\Entities.csproj": {}
+    "C:\\Users\\josec\\Source\\Repos\\Gestion-de-Espacios-BackEnd-\\GestionEspacios\\Entities\\Entities.csproj": {}
   },
   "projects": {
-    "C:\\Users\\josec\\source\\repos\\Gestion-de-Espacios-BackEnd-\\GestionEspacios\\Entities\\Entities.csproj": {
+    "C:\\Users\\josec\\Source\\Repos\\Gestion-de-Espacios-BackEnd-\\GestionEspacios\\Entities\\Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\josec\\source\\repos\\Gestion-de-Espacios-BackEnd-\\GestionEspacios\\Entities\\Entities.csproj",
+        "projectUniqueName": "C:\\Users\\josec\\Source\\Repos\\Gestion-de-Espacios-BackEnd-\\GestionEspacios\\Entities\\Entities.csproj",
         "projectName": "Entities",
-        "projectPath": "C:\\Users\\josec\\source\\repos\\Gestion-de-Espacios-BackEnd-\\GestionEspacios\\Entities\\Entities.csproj",
+        "projectPath": "C:\\Users\\josec\\Source\\Repos\\Gestion-de-Espacios-BackEnd-\\GestionEspacios\\Entities\\Entities.csproj",
         "packagesPath": "C:\\Users\\josec\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\josec\\source\\repos\\Gestion-de-Espacios-BackEnd-\\GestionEspacios\\Entities\\obj\\",
+        "outputPath": "C:\\Users\\josec\\Source\\Repos\\Gestion-de-Espacios-BackEnd-\\GestionEspacios\\Entities\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\josec\\AppData\\Roaming\\NuGet\\NuGet.Config",
