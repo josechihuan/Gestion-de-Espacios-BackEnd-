@@ -12,13 +12,15 @@ namespace Entities.Auth
         public int Id { get; set; } 
 
         [Required(ErrorMessage = "Name is required")]
-        public string? NameSurname { get; set; }
+        public string? Username { get; set; }
 
        /* [Required(ErrorMessage = "Name is required")]
         public string? Surname { get; set; }*/
 
         [Required(ErrorMessage = "Password is required")]
         public string? Password { get; set; }
+        [Required(ErrorMessage = "Password is required")]
+        public string? RepeatPassword { get; set; }
 
         [Required(ErrorMessage = "Email is required")]
         public string? Email { get; set; }

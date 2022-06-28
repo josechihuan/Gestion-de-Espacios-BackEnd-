@@ -11,8 +11,8 @@ using System.Text;
 
 var myAlloSpecificOrigins = "_myAlloSpecificOrigins";
 
-
 var builder = WebApplication.CreateBuilder(args);
+
 ConfigurationManager configuration = builder.Configuration;
 
 

@@ -70,7 +70,7 @@ namespace GestionEspacios.Controllers
             {
                 Email = model.Email,
                 SecurityStamp = Guid.NewGuid().ToString(),
-                UserName = model.NameSurname
+                UserName = model.Username.Replace(" ", "_")
             };
             var result = await _userManager.CreateAsync(user, model.Password);
             if (!result.Succeeded)
@@ -104,7 +104,7 @@ namespace GestionEspacios.Controllers
             {
                 Email = model.Email,
                 SecurityStamp = Guid.NewGuid().ToString(),
-                UserName = model.NameSurname
+                UserName = model.Username.Replace(" ", "_")
             };
             var result = await _userManager.CreateAsync(user, model.Password);
             if (!result.Succeeded)

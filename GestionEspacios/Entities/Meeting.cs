@@ -12,6 +12,6 @@ namespace Entities
         public DateTime ReservationStartTime { get; set; }
         public DateTime ReservationEndTime { get; set; }
         public List<Reservation>? Reservations { get; set; }
-
+        
     }
 }
