@@ -19,6 +19,7 @@ namespace Entities.Auth
 
         [Required(ErrorMessage = "Password is required")]
         public string? Password { get; set; }
+
         [Required(ErrorMessage = "Password is required")]
         public string? RepeatPassword { get; set; }
 

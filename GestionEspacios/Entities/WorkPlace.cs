@@ -9,11 +9,14 @@ namespace Entities
     public class WorkPlace 
     {
         public int Id { get; set; }
-        public string? Name { get; set; }
-        public DateTime BookingStartDate { get; set; }
-        public DateTime BookingEndDate { get; set; }
+        
+        public string Name { get; set; }
+        
+        public string Company { get; set; }
+                
+        public bool Ocupation { get; set; }
 
-        public List<Reservation>? Reservations { get; set; }
+        public List<Reservation>? Reservations { get; set; } 
        
     }
 }

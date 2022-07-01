@@ -10,12 +10,18 @@ namespace Entities
     public class Reservation
     {
         public int Id { get; set; }
-        public string UserId { get; set; }
+
+        public int PersonId { get; set; }
+        
         public int WorkPlaceId { get; set; }
-        public int MeetingId { get; set; }
-        public IdentityUser? User { get; set; }
+        
+        public DateTime BookingStartDate { get; set; }
+        
+        public DateTime BookingEndDate { get; set; }
+        
+        public Person? Person { get; set; }
+        
         public WorkPlace? WorkPlace { get; set; }
-        public Meeting? Meeting { get; set; }
 
     }
 }

@@ -10261,19 +10261,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\josec\\.nuget\\packages\\": {}
+    "C:\\Users\\domin\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\josec\\Source\\Repos\\Gestion-de-Espacios-BackEnd-\\GestionEspacios\\GestionEspacios\\GestionEspacios.csproj",
+      "projectUniqueName": "C:\\Users\\domin\\source\\repos\\Gestion-de-Espacios-BackEnd-login\\GestionEspacios\\GestionEspacios\\GestionEspacios.csproj",
       "projectName": "GestionEspacios",
-      "projectPath": "C:\\Users\\josec\\Source\\Repos\\Gestion-de-Espacios-BackEnd-\\GestionEspacios\\GestionEspacios\\GestionEspacios.csproj",
-      "packagesPath": "C:\\Users\\josec\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\josec\\Source\\Repos\\Gestion-de-Espacios-BackEnd-\\GestionEspacios\\GestionEspacios\\obj\\",
+      "projectPath": "C:\\Users\\domin\\source\\repos\\Gestion-de-Espacios-BackEnd-login\\GestionEspacios\\GestionEspacios\\GestionEspacios.csproj",
+      "packagesPath": "C:\\Users\\domin\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\domin\\source\\repos\\Gestion-de-Espacios-BackEnd-login\\GestionEspacios\\GestionEspacios\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\josec\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\domin\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -10287,11 +10287,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\josec\\Source\\Repos\\Gestion-de-Espacios-BackEnd-\\GestionEspacios\\DataAccess\\DataAccess.csproj": {
-              "projectPath": "C:\\Users\\josec\\Source\\Repos\\Gestion-de-Espacios-BackEnd-\\GestionEspacios\\DataAccess\\DataAccess.csproj"
+            "C:\\Users\\domin\\source\\repos\\Gestion-de-Espacios-BackEnd-login\\GestionEspacios\\DataAccess\\DataAccess.csproj": {
+              "projectPath": "C:\\Users\\domin\\source\\repos\\Gestion-de-Espacios-BackEnd-login\\GestionEspacios\\DataAccess\\DataAccess.csproj"
             },
-            "C:\\Users\\josec\\Source\\Repos\\Gestion-de-Espacios-BackEnd-\\GestionEspacios\\Entities\\Entities.csproj": {
-              "projectPath": "C:\\Users\\josec\\Source\\Repos\\Gestion-de-Espacios-BackEnd-\\GestionEspacios\\Entities\\Entities.csproj"
+            "C:\\Users\\domin\\source\\repos\\Gestion-de-Espacios-BackEnd-login\\GestionEspacios\\Entities\\Entities.csproj": {
+              "projectPath": "C:\\Users\\domin\\source\\repos\\Gestion-de-Espacios-BackEnd-login\\GestionEspacios\\Entities\\Entities.csproj"
             }
           }
         }
@@ -10363,7 +10363,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
       }
     }
   },
@@ -10372,7 +10372,7 @@
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Package 'Microsoft.AspNet.Cors 5.2.9' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net6.0'. This package may not be fully compatible with your project.",
+      "message": "El paquete \"Microsoft.AspNet.Cors 5.2.9\" se restauró con \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8\" en lugar de la plataforma de destino del proyecto \"net6.0\". Puede que el paquete no sea totalmente compatible con el proyecto.",
       "libraryId": "Microsoft.AspNet.Cors",
       "targetGraphs": [
         "net6.0"
@@ -10382,7 +10382,7 @@
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Package 'Microsoft.AspNet.WebApi.Core 5.2.9' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net6.0'. This package may not be fully compatible with your project.",
+      "message": "El paquete \"Microsoft.AspNet.WebApi.Core 5.2.9\" se restauró con \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8\" en lugar de la plataforma de destino del proyecto \"net6.0\". Puede que el paquete no sea totalmente compatible con el proyecto.",
       "libraryId": "Microsoft.AspNet.WebApi.Core",
       "targetGraphs": [
         "net6.0"
@@ -10392,7 +10392,7 @@
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Package 'Microsoft.AspNet.WebApi.Cors 5.2.9' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net6.0'. This package may not be fully compatible with your project.",
+      "message": "El paquete \"Microsoft.AspNet.WebApi.Cors 5.2.9\" se restauró con \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8\" en lugar de la plataforma de destino del proyecto \"net6.0\". Puede que el paquete no sea totalmente compatible con el proyecto.",
       "libraryId": "Microsoft.AspNet.WebApi.Cors",
       "targetGraphs": [
         "net6.0"

@@ -1,8 +1,13 @@
 using DataAccess;
+using DataAccess.Persons;
+using DataAccess.Reservations;
+using DataAccess.WorkPlaces;
 using Entities.Auth;
+using Entities.Database.Data;
 using Entities.Entity_F;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
@@ -51,14 +56,8 @@ builder.Services.AddSwaggerGen(cfg =>
 
 builder.Services.AddDbContext<DataBaseContext>(options => options.UseSqlServer(configuration.GetConnectionString("ConnStr")));
 
-
-/*builder.Services.AddIdentityCore<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = true)
-              .AddEntityFrameworkStores<DataBaseContext>();*/
-// For Identity
-/*builder.Services.AddDefaultIdentity<ApplicationUser>().AddEntityFrameworkStores<DataBaseContext>();*/
-
 builder.Services.AddIdentity<IdentityUser, IdentityRole>()
-    .AddEntityFrameworkStores<DataBaseContext>()
+    .AddEntityFrameworkStores<DataBaseContext>()   
     .AddDefaultTokenProviders();
 
 // Adding Authentication
@@ -88,8 +87,9 @@ builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 //a�adimos el generic repository
 builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
 //cuando se inyecte brandrepositore que utilice brandrepository
-
-//builder.Services.AddScoped<IBrandRepository, BrandRepository>();de usuarios 
+builder.Services.AddScoped<IReservationRepository,ReservationRepository>();
+builder.Services.AddScoped<IWorkPlaceRepository, WorkPlaceRepository>();
+builder.Services.AddScoped<IPersonRepository, PersonRepository>();
 
 builder.Services.AddCors(options =>
 {
@@ -103,6 +103,16 @@ builder.Services.AddCors(options =>
 });
 
 var app = builder.Build();
+
+using (var scope = app.Services.CreateScope())
+{
+    var services = scope.ServiceProvider;
+
+    var context = services.GetRequiredService<DataBaseContext>();
+
+    DbInitializer.Initialize(services);
+}
+
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
