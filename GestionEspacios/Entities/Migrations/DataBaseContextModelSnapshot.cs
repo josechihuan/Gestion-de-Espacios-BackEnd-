@@ -57,10 +57,7 @@ namespace Entities.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
-                    b.Property<DateTime>("BookingEndDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime>("BookingStartDate")
+                    b.Property<DateTime>("BookingDate")
                         .HasColumnType("datetime2");
 
                     b.Property<int>("PersonId")

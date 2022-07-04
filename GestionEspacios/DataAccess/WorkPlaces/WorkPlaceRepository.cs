@@ -25,7 +25,7 @@ namespace DataAccess.WorkPlaces
         public async Task<IEnumerable<WorkPlace>> GetAll()
         {
             return await (from workPlace in _dataBaseContext.WorkPlaces
-                          join reservation in _dataBaseContext.Reservations on workPlace.Id equals reservation.WorkPlaceId
+                          join reservation in _dataBaseContext.Reservations on workPlace.Id equals reservation.SpaceId
                           select new WorkPlace
                           {
                               Id = workPlace.Id,

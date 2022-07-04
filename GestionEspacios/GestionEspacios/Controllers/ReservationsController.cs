@@ -16,6 +16,7 @@ namespace GestionEspacios.Controllers
         private readonly IUnitOfWork _unitOfWork;
         private readonly IReservationRepository _reservationRepository;
 
+
         public ReservationsController(IGenericRepository<Reservation> genericRepository, IUnitOfWork unitOfWork, IReservationRepository reservationRepository)
         {
             _genericRepository = genericRepository;
@@ -31,10 +32,20 @@ namespace GestionEspacios.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult<Reservation>> Post([FromBody] Reservation reservation)
+        public async Task<ActionResult> Post([FromBody] Reservation reservation)
         {
-            var newReservation = await _reservationRepository.Create(reservation);
-            return CreatedAtAction(nameof(Get), new { id = newReservation.Id }, newReservation);
+            try
+            {
+                var newReserved = await _reservationRepository.Create(reservation);
+                return CreatedAtAction(nameof(Get), new { id = newReserved.Id }, newReserved);
+            }
+            catch (Exception ex)
+            {
+
+                return BadRequest(ex.Message);
+
+            }
+
         }
     
 
@@ -81,23 +92,23 @@ namespace GestionEspacios.Controllers
         //}
 
         
-        //[HttpPut]
-        //public async Task<IActionResult> Update([FromBody] Reservation reservation)
-        //{
+        [HttpPut]
+        public async Task<IActionResult> Update([FromBody] Reservation reservation)
+        {
            
-        //    var update = await _genericRepository.UpdateAsync(reservation);
-        //    if (update) _unitOfWork.Commit();
-        //    return Ok(update);
+            var update = await _genericRepository.UpdateAsync(reservation);
+            if (update) _unitOfWork.Commit();
+            return Ok(update);
 
-        //}
-        //[HttpDelete]
-        //public async Task<IActionResult> Delete(int id)
-        //{
-        //    var deleted = await _genericRepository.DeleteAsync(x => x.Id == id);
-        //    if (deleted) _unitOfWork.Commit();
-        //    return Ok(deleted);
+        }
+        [HttpDelete]
+        public async Task<IActionResult> Delete(int id)
+        {
+            var deleted = await _genericRepository.DeleteAsync(x => x.Id == id);
+            if (deleted) _unitOfWork.Commit();
+            return Ok(deleted);
 
-        //}
+        }
 
     }
 }

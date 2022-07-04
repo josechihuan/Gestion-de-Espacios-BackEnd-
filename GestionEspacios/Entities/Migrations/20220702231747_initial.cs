@@ -198,8 +198,7 @@ namespace Entities.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     PersonId = table.Column<int>(type: "int", nullable: false),
                     WorkPlaceId = table.Column<int>(type: "int", nullable: false),
-                    BookingStartDate = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    BookingEndDate = table.Column<DateTime>(type: "datetime2", nullable: false)
+                    BookingDate = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>
                 {

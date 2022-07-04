@@ -13,11 +13,11 @@ namespace Entities
 
         public int PersonId { get; set; }
         
-        public int WorkPlaceId { get; set; }
+        public int SpaceId { get; set; }
         
-        public DateTime BookingStartDate { get; set; }
-        
-        public DateTime BookingEndDate { get; set; }
+        public DateTime Date { get; set; }        
+
+        public string Description { get; set; }
         
         public Person? Person { get; set; }
         
